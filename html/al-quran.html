@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Qolbu</title>
+    <!-- foto web saya -->
+    <link rel="icon" type="image/png" href="../asset/logo-website.png">
+    <!-- ambil font dari google -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS Utama -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- CSS Khusus Al-Quran -->
+    <link rel="stylesheet" href="../css/al-quran.css">
+</head>
+
+<body>
+    <!-- header-->
+    <header class="main-header">
+        <!-- Area identitas merek dan nama website di sisi kiri -->
+        <div class="header-left">
+            <a href="../index.html" class="brand-link">
+                <!-- Tempat khusus gambar logo aplikasi -->
+                <div class="brand-logo">
+                    <img src="../asset/logo-website.png" alt="Logo" class="logo-img">
+                </div>
+                <h1 class="brand-name">Ruang Qolbu</h1>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-item">Beranda</a></li>
+                <li><a href="al-quran.html" class="nav-item active">Al-Quran</a></li>
+                <li><a href="../html/doa.html" class="nav-item">Doa-doa</a></li>
+                <li><a href="../html/about.html" class="nav-item">About</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger-btn" id="hamburger-btn">☰</button>
+    </header>
+
+    <!-- sidebar di hp-->
+    <!-- Layar latar transparan hitam saat menu layar HP terbuka -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    
+    <!-- Wadah utama menu navigasi samping khusus tampilan HP -->
+    <div class="sidebar" id="sidebar">
+        <button class="sidebar-close" id="sidebar-close">✕</button>
+        <nav class="sidebar-menu">
+            <a href="../index.html">Beranda</a>
+            <a href="al-quran.html" class="active">Al-Quran</a>
+            <a href="../html/doa.html">Doa-doa</a>
+            <a href="../html/about.html">About</a>
+        </nav>
+    </div>
+
+    <!-- konten utama -->
+    <main class="main-content">
+        <!-- Spanduk utama judul dan kolom pencarian surah Al-Quran -->
+        <section class="quran-header-section">
+            <h2>Al-Quran Digital</h2>
+            <!-- Wadah khusus pencarian surah -->
+            <div class="search-box">
+                <input type="text" id="input-cari-surah" class="search-input"
+                    placeholder="Cari surah (misal: Al-Fatihah)...">
+            </div>
+        </section>
+
+        <!-- Area teks penampil jumlah surah yang ditemukan -->
+        <div class="quran-counter" id="quran-counter">Menampilkan 0 surah</div>
+
+        <!-- Area susunan daftar kartu surah -->
+        <section class="quran-grid-section">
+            <!-- Tempat daftar kartu surah dimuat secara otomatis -->
+            <div id="wadah-daftar-surah" class="quran-grid-container">
+                <p class="loading-text" id="teks-loading">Memuat daftar surah...</p>
+            </div>
+        </section>
+
+        <!-- Tempat munculnya jendela pop-up untuk membaca ayat surah -->
+        <div id="modal-container" class="modal-container"></div>
+    </main>
+
+    <!-- footer website -->
+    <footer class="site-footer">
+        <!-- Wadah utama seluruh kolom navigasi dan informasi bagian bawah -->
+        <div class="footer-container">
+            <!-- Ringkasan deskripsi singkat identitas platform -->
+            <div class="footer-box">
+                <h2 class="footer-title">Ruang Qolbu</h2>
+                <p>Menyajikan kemudahan dalam membaca Al-Quran dan kumpulan doa sehari-hari.</p>
+            </div>
+            <!-- Daftar tautan navigasi cepat menu utama -->
+            <div class="footer-box">
+                <h3 class="footer-title">Menu</h3>
+                <ul>
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="al-quran.html">Al-Quran</a></li>
+                    <li><a href="../html/doa.html">Doa-doa</a></li>
+                    <li><a href="../html/about.html">About</a></li>
+                </ul>
+            </div>
+            <!-- Daftar tautan akun-akun media sosial resmi -->
+            <div class="footer-box">
+                <h3 class="footer-title">Sosial Media</h3>
+                <ul>
+                    <li><a href="https://instagram.com/zenwhite_" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/azis.sinaga.900" target="_blank">Facebook</a></li>
+                    <li><a href="https://wa.me/6282163698895" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://www.youtube.com/@zenwhite-w7o" target="_blank">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Baris keterangan hak cipta (copyright) paling bawah -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ruang Qolbu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- penghubung javascript -->
+    <script src="../js/script.js"></script>
+    <script src="../js/al-quran.js"></script>
+</body>
+
+</html>

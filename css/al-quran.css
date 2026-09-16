@@ -1,0 +1,412 @@
+/* header hero al-quran */
+.quran-header-section {
+    display: flex; /* tata letak fleksibel */
+    flex-direction: column; /* urutan elemen dari atas ke bawah */
+    align-items: center; /* posisikan isi di tengah horizontal */
+    justify-content: center; /* posisikan isi di tengah vertikal */
+    text-align: center; /* teks rata tengah */
+    background: linear-gradient(135deg, #0F3040 0%, #424453 100%); /* warna latar gradien */
+    padding: 35px 20px; /* ruang dalam header */
+    border-radius: 20px; /* sudut kotak melengkung */
+    margin-bottom: 25px; /* jarak ke elemen bawah */
+    box-shadow: 0 10px 30px rgba(15, 48, 64, 0.15); /* bayangan lembut */
+    gap: 16px; /* jarak antar elemen header */
+    position: relative; /* acuan posisi elemen turunan */
+    overflow: hidden; /* memotong isi yang keluar batas */
+}
+
+.quran-header-section h2 {
+    color: #DCA489; /* warna judul header */
+    font-size: 32px; /* ukuran huruf judul */
+    margin: 0; /* menghilangkan margin bawaan */
+    font-family: 'Playfair Display', serif; /* jenis font judul */
+    font-weight: 700; /* ketebalan huruf judul */
+}
+
+.search-box {
+    width: 100%; /* lebar wadah pencarian penuh */
+    max-width: 450px; /* batas lebar maksimal pencarian */
+    display: flex; /* menyusun isi secara fleksibel */
+    justify-content: center; /* posisikan pencarian di tengah */
+}
+
+.search-input {
+    padding: 12px 22px; /* ruang dalam kolom input */
+    border-radius: 30px; /* bentuk kapsul melengkung */
+    border: 2px solid #A07366; /* warna garis tepi input */
+    font-size: 14px; /* ukuran font isian */
+    width: 100%; /* lebar input memenuhi wadah */
+    transition: all 0.3s ease; /* transisi efek yang halus */
+    outline: none; /* menghilangkan garis fokus bawaan */
+    background: rgba(255, 255, 255, 0.95); /* warna latar transparan halus */
+    color: #0F3040; /* warna teks isian */
+    font-family: 'Poppins', sans-serif; /* jenis font input */
+    text-align: center; /* teks input rata tengah */
+}
+
+.search-input:focus {
+    border-color: #DCA489; /* warna garis saat input dipilih */
+    background: #ffffff; /* latar belakang putih bersih */
+    box-shadow: 0 0 0 4px rgba(220, 164, 137, 0.25); /* pendaran bayangan di sekitar input */
+}
+
+/* counter surah */
+.quran-counter {
+    font-size: 14px; /* ukuran huruf keterangan jumlah */
+    color: #0F3040; /* warna teks counter */
+    margin-bottom: 16px; /* jarak bawah counter */
+    font-weight: 500; /* ketebalan font sedang */
+    text-align: right; /* teks rata kanan */
+}
+
+/* grid surah */
+.quran-grid-section {
+    margin-bottom: 40px; /* jarak bawah seksi grid */
+}
+
+.quran-grid-container {
+    display: grid; /* menggunakan tata letak grid */
+    grid-template-columns: repeat(3, 1fr); /* membagi menjadi 3 kolom rata */
+    gap: 24px; /* jarak antar kartu surah */
+}
+
+/* kartu surah */
+.quran-card {
+    background: white; /* warna latar belakang kartu */
+    border-radius: 14px; /* sudut melengkung */
+    padding: 22px 20px; /* ruang dalam kartu */
+    border-left: 5px solid #424453; /* garis pemisah di sisi kiri */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); /* bayangan kartu halus */
+    transition: all 0.3s ease; /* transisi efek pergerakan */
+    cursor: pointer; /* ubah kursor menjadi telunjuk */
+}
+
+.quran-card:hover {
+    transform: translateY(-4px); /* efek kartu naik 4px saat disentuh */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10); /* bayangan membesar saat disentuh */
+    border-left-color: #0F3040; /* warna garis kiri saat disentuh */
+}
+
+.quran-card .quran-nama {
+    font-weight: 700; /* ketebalan huruf nama surah */
+    font-size: 20px; /* ukuran huruf nama surah */
+    color: #0F3040; /* warna huruf nama surah */
+    margin-bottom: 2px; /* jarak bawah nama surah */
+    font-family: 'Playfair Display', serif; /* jenis font nama surah */
+}
+
+.quran-card .quran-arti {
+    font-size: 14px; /* ukuran font arti surah */
+    color: #888; /* warna teks arti abu-abu */
+    margin-bottom: 4px; /* jarak bawah arti surah */
+}
+
+.quran-card .quran-ayat {
+    font-size: 13px; /* ukuran huruf jumlah ayat */
+    color: #555; /* warna teks jumlah ayat */
+    border-top: 1px solid #f0f0f0; /* garis pembatas atas */
+    padding-top: 8px; /* ruang atas dari garis */
+    margin-top: 4px; /* jarak atas ke garis pembatas */
+}
+
+.quran-card .quran-arab {
+    font-size: 24px; /* ukuran huruf arab surah */
+    color: #0F3040; /* warna tulisan arab */
+    font-family: 'Amiri', 'Arial', serif; /* jenis font arab */
+    text-align: right; /* tulisan arab rata kanan */
+    margin-top: 6px; /* jarak atas teks arab */
+    line-height: 1.6; /* jarak antar baris tulisan arab */
+    font-weight: 600; /* ketebalan huruf arab */
+}
+
+/* modal detail surah */
+.modal-large {
+    max-width: 900px !important; /* batas lebar maksimal jendela pop-up */
+    max-height: 95vh !important; /* tinggi maksimal 95% dari layar */
+}
+
+/* navigasi modal */
+.surah-nav-header {
+    display: flex; /* menyusun navigasi menyamping */
+    justify-content: space-between; /* tombol kiri dan kanan sejajar */
+    align-items: center; /* posisikan tengah secara vertikal */
+    border-bottom: 2px solid #e8f5e9; /* garis pembatas bawah */
+    padding-bottom: 15px; /* ruang bawah header modal */
+    margin-bottom: 15px; /* jarak bawah header modal */
+    flex-wrap: wrap; /* pindah baris jika layar sempit */
+    gap: 10px; /* jarak antar tombol navigasi */
+}
+
+/* grup tombol navigasi */
+.surah-nav-group {
+    display: flex; /* menyusun tombol menyamping */
+    gap: 12px; /* jarak antar tombol navigasi */
+    align-items: center; /* posisikan tengah secara vertikal */
+}
+
+.nav-btn {
+    background-color: #0F3040; /* warna latar tombol navigasi */
+    color: white; /* warna teks tombol */
+    border: none; /* tanpa garis tepi */
+    padding: 10px 22px; /* ruang dalam tombol */
+    border-radius: 8px; /* sudut melengkung */
+    cursor: pointer; /* kursor menjadi telunjuk */
+    font-weight: 600; /* ketebalan font tombol */
+    transition: all 0.3s ease; /* transisi efek halus */
+    font-size: 14px; /* ukuran huruf tombol */
+}
+
+.nav-btn:hover:not(:disabled) {
+    background-color: #424453; /* warna latar tombol saat disentuh */
+    transform: translateY(-2px); /* efek tombol terangkat 2px */
+}
+
+.nav-btn:disabled {
+    background-color: #ccc; /* warna latar saat tombol dinonaktifkan */
+    cursor: not-allowed; /* kursor tanda tidak dapat diklik */
+    transform: none; /* hilangkan efek terangkat */
+}
+
+.btn-kembali {
+    background-color: #424453; /* warna latar tombol kembali */
+}
+
+.btn-kembali:hover:not(:disabled) {
+    background-color: #0F3040; /* warna tombol kembali saat disentuh */
+}
+
+/* panel audio */
+.audio-panel {
+    display: flex; /* menyusun kontrol audio menyamping */
+    justify-content: space-between; /* posisi menyebar sejajar */
+    align-items: center; /* meratakan posisi vertikal */
+    background: linear-gradient(135deg, #DCA489, #A07366); /* warna latar gradien */
+    padding: 15px 20px; /* ruang dalam panel */
+    border-radius: 12px; /* sudut melengkung */
+    margin-bottom: 20px; /* jarak bawah panel */
+    position: sticky; /* menempel saat area digulirkan */
+    top: 0; /* batas tempel paling atas */
+    z-index: 10; /* posisi di atas teks ayat */
+    border: 1px solid #424453; /* garis pembatas panel */
+    gap: 15px; /* jarak antar elemen audio */
+    flex-wrap: wrap; /* pindah baris jika layar menyempit */
+}
+
+.ayat-selector {
+    padding: 10px 15px; /* ruang dalam dropdown ayat */
+    border-radius: 8px; /* sudut melengkung */
+    border: 2px solid #0F3040; /* garis tepi dropdown */
+    outline: none; /* menghilangkan garis fokus */
+    font-size: 14px; /* ukuran huruf opsi */
+    font-weight: 600; /* ketebalan font */
+    color: #0F3040; /* warna teks opsi */
+    background: white; /* warna latar putih */
+    cursor: pointer; /* kursor menjadi telunjuk */
+    min-width: 150px; /* lebar minimal dropdown ayat */
+}
+
+.qari-selector {
+    padding: 10px 15px; /* ruang dalam dropdown qari */
+    border-radius: 8px; /* sudut melengkung */
+    border: 2px solid #0F3040; /* garis tepi dropdown */
+    outline: none; /* menghilangkan garis fokus */
+    font-size: 14px; /* ukuran huruf opsi */
+    font-weight: 600; /* ketebalan font */
+    color: #0F3040; /* warna teks opsi */
+    background: white; /* warna latar putih */
+    cursor: pointer; /* kursor menjadi telunjuk */
+    min-width: 180px; /* lebar minimal dropdown qari */
+}
+
+.audio-player {
+    flex: 1; /* memenuhi sisa ruang yang ada */
+    min-width: 200px; /* lebar minimal pemutar audio */
+}
+
+/* area scroll ayat */
+.modal-scroll-area {
+    max-height: 55vh; /* tinggi maksimal area gulung ayat */
+    overflow-y: auto; /* munculkan gulungan vertikal jika teks panjang */
+    padding-right: 5px; /* ruang kanan untuk bilah gulung */
+}
+
+.modal-scroll-area::-webkit-scrollbar {
+    width: 6px; /* lebar bilah gulung */
+}
+
+.modal-scroll-area::-webkit-scrollbar-track {
+    background: #f1f1f1; /* warna jalur bilah gulung */
+    border-radius: 10px; /* sudut melengkung jalur gulung */
+}
+
+.modal-scroll-area::-webkit-scrollbar-thumb {
+    background: #0F3040; /* warna batang bilah gulung */
+    border-radius: 10px; /* sudut melengkung batang gulung */
+}
+
+/* kotak ayat */
+.ayat-box {
+    padding: 15px 20px; /* ruang dalam kotak ayat */
+    margin-bottom: 10px; /* jarak bawah antar ayat */
+    border-radius: 10px; /* sudut melengkung */
+    transition: background-color 0.3s ease; /* transisi efek warna halus */
+    border: 1px solid transparent; /* garis pembatas transparan bawaan */
+}
+
+.ayat-box:hover {
+    background-color: #f8fafc; /* warna latar saat kotak ayat disentuh */
+}
+
+.ayat-aktif {
+    background-color: #DCA489 !important; /* warna khusus ayat yang sedang diputar */
+    border-left: 5px solid #424453; /* garis indikator aktif di kiri */
+    border-radius: 10px; /* sudut melengkung */
+    padding: 15px 20px; /* ruang dalam kotak ayat aktif */
+}
+
+.ayat-header {
+    display: flex; /* menyusun judul ayat dan tombol putar */
+    align-items: center; /* posisikan tengah secara vertikal */
+    gap: 8px; /* jarak antar elemen header ayat */
+    margin-bottom: 4px; /* jarak bawah header ayat */
+}
+
+.ayat-play-label {
+    color: #424453; /* warna teks label putar */
+    font-weight: bold; /* ketebalan font label */
+    cursor: pointer; /* kursor menjadi telunjuk */
+    margin-right: 10px; /* jarak kanan label */
+    font-size: 13px; /* ukuran huruf label */
+    text-decoration: underline; /* memberi garis bawah pada teks */
+}
+
+.ayat-play-label:hover {
+    color: #0F3040; /* warna label saat disentuh */
+}
+
+.ayat-nomor {
+    font-weight: 600; /* ketebalan huruf nomor ayat */
+    color: #0F3040; /* warna nomor ayat */
+    font-size: 14px; /* ukuran font nomor ayat */
+}
+
+.arabic-text {
+    font-size: 28px; /* ukuran huruf arab ayat */
+    font-family: 'Amiri', 'Arial', serif; /* jenis font arab */
+    text-align: right; /* tulisan arab rata kanan */
+    color: #0F3040; /* warna tulisan arab */
+}
+
+.latin-text {
+    font-size: 15px; /* ukuran huruf latin transliterasi */
+    color: #555; /* warna teks latin abu-abu */
+    font-style: italic; /* huruf dicetak miring */
+    margin: 6px 0; /* jarak atas dan bawah */
+}
+
+/* media queries responsive */
+@media (max-width: 992px) {
+    .quran-grid-container {
+        grid-template-columns: repeat(2, 1fr); /* menjadi 2 kolom di layar sedang */
+    }
+}
+
+@media (max-width: 768px) {
+    .quran-header-section {
+        flex-direction: column; /* urutan header dari atas ke bawah */
+        align-items: stretch; /* memenuhi lebar wadah */
+    }
+
+    .quran-header-right {
+        flex-direction: column; /* kontrol pencarian disusun ke bawah */
+        align-items: stretch; /* memenuhi lebar wadah */
+    }
+
+    .search-input {
+        width: 100%; /* input memenuhi lebar penuh */
+    }
+
+    .quran-grid-container {
+        grid-template-columns: 1fr; /* menjadi 1 kolom di layar HP */
+    }
+
+    .quran-counter {
+        text-align: center; /* teks counter rata tengah */
+    }
+
+    .audio-panel {
+        flex-direction: column; /* kontrol audio disusun ke bawah */
+        align-items: stretch; /* memenuhi lebar panel */
+    }
+
+    .surah-nav-header {
+        flex-direction: column; /* navigasi modal disusun ke bawah */
+        align-items: stretch; /* memenuhi lebar modal */
+        text-align: center; /* teks rata tengah */
+    }
+
+    .surah-nav-header .nav-btn {
+        width: 100%; /* tombol navigasi memenuhi lebar wadah */
+    }
+
+    .modal-large {
+        max-width: 100% !important; /* modal memenuhi lebar layar penuh */
+    }
+
+    .modal-content {
+        padding: 15px; /* penyesuaian ruang dalam modal */
+    }
+
+    .ayat-selector,
+    .qari-selector {
+        width: 100%; /* dropdown memenuhi lebar wadah */
+    }
+
+    .surah-nav-group {
+        justify-content: center; /* posisikan grup tombol di tengah */
+        gap: 15px; /* jarak antar tombol */
+        width: 100%; /* memenuhi lebar penuh */
+    }
+
+    .surah-nav-group .nav-btn {
+        flex: 1; /* membagi lebar tombol sama rata */
+        max-width: 150px; /* batas lebar maksimal tombol */
+    }
+}
+
+@media (max-width: 480px) {
+    .quran-header-section {
+        padding: 20px; /* menyesuaikan ruang dalam header HP kecil */
+    }
+
+    .arabic-text {
+        font-size: 22px; /* memperkecil ukuran tulisan arab */
+    }
+
+    .nav-btn {
+        padding: 8px 14px; /* menyesuaikan ruang dalam tombol */
+        font-size: 13px; /* memperkecil font tombol */
+    }
+
+    .quran-card {
+        padding: 18px 16px; /* ruang dalam kartu surah HP kecil */
+    }
+
+    .quran-card .quran-arab {
+        font-size: 20px; /* memperkecil huruf arab pada kartu */
+    }
+
+    .quran-card .quran-nama {
+        font-size: 17px; /* memperkecil nama surah */
+    }
+
+    .surah-nav-group {
+        gap: 10px; /* memperkecil jarak tombol di HP kecil */
+    }
+
+    .surah-nav-group .nav-btn {
+        max-width: 120px; /* memperkecil lebar maksimal tombol */
+        font-size: 12px; /* memperkecil huruf tombol */
+        padding: 8px 12px; /* menyesuaikan ruang dalam tombol */
+    }
+}

@@ -1,0 +1,178 @@
+/* container tentang kami */
+.about-container {
+    max-width: 750px; /* batas lebar maksimal wadah */
+    margin: 0 auto; /* posisi tengah horizontal */
+    background: white; /* warna latar belakang putih */
+    border-radius: 16px; /* sudut kotak melengkung */
+    padding: 40px 45px; /* ruang dalam wadah */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* bayangan lembut */
+    border: 1px solid rgba(66, 68, 83, 0.12); /* garis tepi tipis */
+}
+
+/* gambar landscape */
+.about-image {
+    text-align: center; /* posisi gambar di tengah */
+    margin-bottom: 25px; /* jarak bawah seksi gambar */
+}
+
+.about-image img {
+    width: 100%; /* lebar gambar memenuhi wadah */
+    max-width: 850px; /* batas lebar maksimal gambar */
+    height: 280px; /* tinggi gambar tetap */
+    object-fit: cover; /* memotong gambar agar proporsional */
+    border-radius: 12px; /* sudut gambar melengkung */
+    border: 3px solid #424453; /* garis tepi tebal */
+    box-shadow: 0 4px 15px rgba(15, 48, 64, 0.10); /* bayangan di bawah gambar */
+    display: block; /* elemen ditampilkan secara blok */
+    margin: 0 auto; /* posisikan tengah secara otomatis */
+}
+
+/* seksi teks deskripsi */
+.about-text h1 {
+    font-family: 'Playfair Display', serif; /* font judul utama */
+    font-size: 30px; /* ukuran huruf judul */
+    color: #0F3040; /* warna teks judul */
+    text-align: center; /* judul rata tengah */
+    margin-bottom: 14px; /* jarak bawah judul */
+}
+
+.about-text h1 span {
+    color: #424453; /* warna khusus teks sorotan */
+}
+
+.about-text p {
+    font-size: 15px; /* ukuran font paragraf */
+    color: #555; /* warna teks abu-abu */
+    line-height: 1.9; /* jarak antar baris kalimat */
+    margin-bottom: 10px; /* jarak bawah paragraf */
+    text-align: justify; /* teks rata kiri-kanan */
+}
+
+.about-text .about-maker {
+    text-align: center; /* teks pembuat rata tengah */
+    margin-top: 8px; /* jarak atas teks pembuat */
+    color: #0F3040; /* warna teks pembuat */
+}
+
+/* form umpan balik */
+.feedback-section { 
+    margin-top: 35px; /* jarak dari elemen atas */
+    padding-top: 25px; /* ruang dalam bagian atas */
+    border-top: 2px dashed #A07366; /* garis pemisah putus-putus */
+}
+
+.feedback-section h2 {
+    font-family: 'Playfair Display', serif; /* font judul form */
+    font-size: 24px; /* ukuran font judul form */
+    color: #0F3040; /* warna teks judul form */
+    margin-bottom: 4px; /* jarak bawah judul form */
+}
+
+.feedback-section > p {
+    font-size: 14px; /* ukuran huruf keterangan */
+    color: #888; /* warna teks abu-abu muda */
+    margin-bottom: 18px; /* jarak bawah keterangan */
+}
+
+.form-group {
+    margin-bottom: 14px; /* jarak antar kelompok form */
+}
+
+.form-group label {
+    display: block; /* label tampil pada baris sendiri */
+    font-weight: 600; /* ketebalan huruf label */
+    font-size: 14px; /* ukuran huruf label */
+    color: #0F3040; /* warna huruf label */
+    margin-bottom: 4px; /* jarak bawah label */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* lebar input memenuhi wadah */
+    padding: 12px 16px; /* ruang dalam kolom input */
+    border-radius: 10px; /* sudut input melengkung */
+    border: 2px solid #A07366; /* garis tepi input */
+    font-size: 14px; /* ukuran huruf isian input */
+    font-family: 'Poppins', sans-serif; /* jenis font isian */
+    transition: all 0.3s; /* transisi efek fokus yang halus */
+    outline: none; /* menghilangkan garis fokus bawaan */
+    background: white; /* warna latar belakang input */
+    box-sizing: border-box; /* ukuran dihitung termasuk padding */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0F3040; /* warna garis saat kolom dipilih */
+    box-shadow: 0 0 0 4px rgba(15, 48, 64, 0.06); /* efek pendaran di sekitar input */
+}
+
+.form-group textarea {
+    resize: vertical; /* ubah ukuran hanya secara vertikal */
+    min-height: 100px; /* tinggi minimal area teks */
+}
+
+.form-btn {
+    background: #0F3040; /* warna latar tombol kirim */
+    color: white; /* warna teks tombol */
+    border: none; /* tanpa garis tepi tombol */
+    padding: 14px 30px; /* ruang dalam tombol */
+    border-radius: 50px; /* bentuk tombol kapsul */
+    font-weight: 700; /* ketebalan huruf tombol */
+    font-size: 15px; /* ukuran font tombol */
+    cursor: pointer; /* kursor menjadi telunjuk */
+    transition: all 0.3s ease; /* transisi efek yang halus */
+    width: 100%; /* tombol memenuhi lebar wadah */
+    font-family: 'Poppins', sans-serif; /* jenis font tombol */
+}
+
+.form-btn:hover {
+    background: #424453; /* warna latar saat disentuh */
+    transform: translateY(-2px); /* efek tombol naik 2px */
+    box-shadow: 0 6px 20px rgba(15, 48, 64, 0.20); /* bayangan lembut di bawah tombol */
+}
+
+/* media queries responsive */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 28px 20px; /* penyesuaian ruang dalam tablet */
+        border-radius: 12px; /* memperkecil kelengkungan sudut */
+    }
+
+    .about-text h1 {
+        font-size: 24px; /* memperkecil ukuran judul */
+    }
+
+    .about-image img {
+        height: 220px; /* memperpendek tinggi gambar */
+        max-width: 100%; /* gambar memenuhi lebar wadah */
+    }
+
+    .feedback-section h2 {
+        font-size: 20px; /* memperkecil subjudul form */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 20px 14px; /* penyesuaian ruang dalam hp */
+    }
+
+    .about-text h1 {
+        font-size: 20px; /* memperkecil judul di layar HP */
+    }
+
+    .about-text p {
+        font-size: 14px; /* memperkecil teks deskripsi */
+        text-align: left; /* rata kiri di layar kecil */
+    }
+
+    .about-image img {
+        height: 180px; /* menyesuaikan tinggi gambar HP */
+        max-width: 100%; /* gambar memenuhi lebar wadah */
+    }
+
+    .form-btn {
+        font-size: 14px; /* memperkecil font tombol */
+        padding: 12px 18px; /* menyesuaikan ruang dalam tombol */
+    }
+}

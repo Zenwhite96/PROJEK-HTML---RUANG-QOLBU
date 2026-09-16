@@ -1,0 +1,273 @@
+/* header hero doa */
+.doa-header-section {
+    display: flex; /* tata letak fleksibel */
+    flex-direction: column; /* menyusun elemen dari atas ke bawah */
+    align-items: center; /* posisikan isi di tengah horizontal */
+    justify-content: center; /* posisikan isi di tengah vertikal */
+    text-align: center; /* teks posisi di tengah */
+    background: linear-gradient(135deg, #0F3040 0%, #424453 100%); /* warna latar gradien */
+    padding: 35px 20px; /* ruang dalam header */
+    border-radius: 20px; /* sudut kotak melengkung */
+    margin-bottom: 25px; /* jarak ke elemen bawah */
+    box-shadow: 0 10px 30px rgba(15, 48, 64, 0.15); /* bayangan lembut di bawah header */
+    gap: 18px; /* jarak antar elemen header */
+    position: relative; /* acuan posisi elemen turunan */
+    overflow: hidden; /* memotong isi yang keluar dari batas */
+}
+
+.doa-header-section h2 {
+    color: #DCA489; /* warna judul utama */
+    font-size: 32px; /* ukuran huruf judul */
+    margin: 0; /* menghilangkan margin bawaan */
+    font-family: 'Playfair Display', serif; /* jenis font judul */
+    font-weight: 700; /* ketebalan huruf judul */
+}
+
+.doa-header-controls {
+    display: flex; /* menyusun input dan filter menyamping */
+    align-items: center; /* meratakan posisi vertikal */
+    justify-content: center; /* memposisikan di tengah horizontal */
+    gap: 14px; /* jarak antar elemen kontrol */
+    width: 100%; /* lebar wadah memenuhi area */
+    max-width: 550px; /* batas lebar maksimal area kontrol */
+    flex-wrap: wrap; /* pindah baris jika layar sempit */
+}
+
+.doa-header-controls .search-input {
+    flex: 1; /* membagi ruang secara proporsional */
+    min-width: 200px; /* lebar minimal kolom cari */
+    padding: 12px 22px; /* ruang dalam kolom cari */
+    border-radius: 30px; /* bentuk kapsul melengkung */
+    border: 2px solid #A07366; /* garis tepi kolom pencarian */
+    font-size: 14px; /* ukuran font isian */
+    transition: all 0.3s ease; /* transisi efek yang halus */
+    outline: none; /* menghilangkan garis fokus bawaan */
+    background: rgba(255, 255, 255, 0.95); /* warna latar transparan halus */
+    color: #0F3040; /* warna teks isian */
+    font-family: 'Poppins', sans-serif; /* jenis font input */
+    text-align: center; /* teks input rata tengah */
+}
+
+.doa-header-controls .search-input:focus {
+    border-color: #DCA489; /* warna garis saat input dipilih */
+    background: #ffffff; /* latar belakang putih bersih */
+    box-shadow: 0 0 0 4px rgba(220, 164, 137, 0.25); /* pendaran bayangan di sekitar input */
+}
+
+.doa-header-controls .filter-select {
+    flex: 1; /* membagi ruang secara proporsional */
+    min-width: 180px; /* lebar minimal dropdown filter */
+    padding: 12px 22px; /* ruang dalam dropdown */
+    border-radius: 30px; /* bentuk kapsul melengkung */
+    border: 2px solid #A07366; /* garis tepi dropdown */
+    font-size: 14px; /* ukuran huruf opsi */
+    background: rgba(255, 255, 255, 0.95); /* warna latar transparan halus */
+    font-weight: 600; /* ketebalan font opsi */
+    color: #0F3040; /* warna teks opsi */
+    outline: none; /* menghilangkan garis fokus */
+    cursor: pointer; /* kursor menjadi telunjuk */
+    transition: all 0.3s ease; /* transisi efek yang halus */
+    font-family: 'Poppins', sans-serif; /* jenis font dropdown */
+    text-align: center; /* teks dropdown rata tengah */
+}
+
+.doa-header-controls .filter-select:focus {
+    border-color: #DCA489; /* warna garis saat dropdown dipilih */
+    background: #ffffff; /* latar belakang putih bersih */
+    box-shadow: 0 0 0 4px rgba(220, 164, 137, 0.25); /* pendaran bayangan di sekitar dropdown */
+}
+
+/* counter doa */
+.doa-counter {
+    font-size: 14px; /* ukuran huruf counter */
+    color: #0F3040; /* warna teks counter */
+    margin-bottom: 20px; /* jarak bawah counter */
+    font-weight: 600; /* ketebalan font sedang */
+    text-align: right; /* teks rata kanan */
+}
+
+/* grid doa */
+.doa-grid-section {
+    margin-bottom: 40px; /* jarak bawah seksi grid */
+}
+
+.doa-grid-container {
+    display: grid; /* menggunakan tata letak grid */
+    grid-template-columns: repeat(3, 1fr); /* membagi menjadi 3 kolom rata */
+    gap: 24px; /* jarak antar kartu doa */
+}
+
+/* kartu doa */
+.doa-card {
+    background: white; /* warna latar belakang kartu */
+    border-radius: 16px; /* sudut melengkung */
+    padding: 22px 20px; /* ruang dalam kartu */
+    border: 1px solid #e0e0e0; /* garis pembatas kartu */
+    border-left: 6px solid #424453; /* garis pemisah di sisi kiri */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04); /* bayangan kartu halus */
+    transition: all 0.3s ease; /* transisi efek pergerakan */
+    cursor: pointer; /* ubah kursor menjadi telunjuk */
+}
+
+.doa-card:hover {
+    transform: translateY(-4px); /* efek kartu naik 4px saat disentuh */
+    box-shadow: 0 12px 25px rgba(15, 48, 64, 0.12); /* bayangan membesar saat disentuh */
+    border-color: #424453; /* warna garis tepi saat disentuh */
+    border-left-color: #0F3040; /* warna garis kiri saat disentuh */
+}
+
+.doa-card .doa-nama {
+    font-weight: 700; /* ketebalan huruf nama doa */
+    font-size: 17px; /* ukuran huruf nama doa */
+    color: #0F3040; /* warna huruf nama doa */
+    margin-bottom: 4px; /* jarak bawah nama doa */
+    font-family: 'Playfair Display', serif; /* jenis font nama doa */
+}
+
+.doa-card .doa-grup {
+    font-size: 13px; /* ukuran font grup doa */
+    color: #A07366; /* warna teks grup */
+    margin-bottom: 8px; /* jarak bawah teks grup */
+    font-weight: 500; /* ketebalan font */
+}
+
+.doa-card .doa-preview {
+    font-size: 14px; /* ukuran font preview arab */
+    color: #555; /* warna teks preview abu-abu */
+    line-height: 1.6; /* jarak antar baris */
+    margin-top: 6px; /* jarak atas teks preview */
+    font-style: italic; /* cetak miring */
+    border-top: 1px solid #f0f0f0; /* garis pembatas atas */
+    padding-top: 10px; /* ruang atas dari garis */
+    max-height: 44px; /* batas tinggi maksimal preview */
+    overflow: hidden; /* memotong teks yang meluap */
+    direction: rtl; /* arah teks dari kanan ke kiri */
+    text-align: right; /* teks rata kanan */
+    font-family: 'Amiri', serif; /* jenis font arab */
+}
+
+/* modal detail doa */
+.modal-doa {
+    max-width: 680px !important; /* batas lebar maksimal pop-up doa */
+}
+
+.doa-modal-title {
+    color: #0F3040; /* warna judul modal */
+    font-family: 'Playfair Display', serif; /* jenis font judul modal */
+    text-align: center; /* teks rata tengah */
+    margin-bottom: 4px; /* jarak bawah judul modal */
+    font-size: 26px; /* ukuran font judul modal */
+}
+
+.doa-modal-grup {
+    text-align: center; /* teks grup rata tengah */
+    color: #888; /* warna teks abu-abu */
+    font-size: 14px; /* ukuran font grup modal */
+    margin-bottom: 16px; /* jarak bawah grup */
+}
+
+.doa-modal-arabic {
+    font-family: 'Amiri', serif; /* jenis font arab */
+    font-size: 30px; /* ukuran huruf arab */
+    text-align: right; /* tulisan arab rata kanan */
+    color: #0F3040; /* warna tulisan arab */
+    margin: 10px 0 12px 0; /* jarak atas dan bawah */
+    line-height: 1.9; /* jarak antar baris arab */
+    padding: 16px; /* ruang dalam wadah teks arab */
+    background: #FFF8F5; /* warna latar khusus wadah arab */
+    border-radius: 10px; /* sudut melengkung */
+    direction: rtl; /* arah teks dari kanan ke kiri */
+    border: 1px solid #DCA489; /* garis tepi wadah arab */
+}
+
+.doa-modal-latin {
+    font-size: 15px; /* ukuran huruf latin transliterasi */
+    color: #444; /* warna teks latin */
+    font-style: italic; /* huruf dicetak miring */
+    margin-bottom: 12px; /* jarak bawah latin */
+    text-align: center; /* teks rata tengah */
+    padding: 10px; /* ruang dalam wadah latin */
+    background: #F8FAFC; /* warna latar wadah latin */
+    border-radius: 8px; /* sudut melengkung */
+    line-height: 1.6; /* jarak antar baris */
+}
+
+.doa-modal-arti {
+    font-size: 15px; /* ukuran huruf terjemahan */
+    color: #333; /* warna teks terjemahan */
+    padding: 14px 18px; /* ruang dalam wadah arti */
+    background: #F8FAFC; /* warna latar wadah arti */
+    border-left: 4px solid #424453; /* garis indikator di kiri */
+    border-radius: 10px; /* sudut melengkung */
+    margin-top: 10px; /* jarak atas wadah arti */
+    line-height: 1.8; /* jarak antar baris terjemahan */
+}
+
+/* tombol salin */
+.btn-copy {
+    background: #0F3040; /* warna latar tombol salin */
+    color: white; /* warna teks tombol salin */
+    border: none; /* tanpa garis tepi */
+    padding: 10px 16px; /* ruang dalam tombol salin */
+    border-radius: 8px; /* sudut melengkung */
+    cursor: pointer; /* kursor menjadi telunjuk */
+    font-weight: 600; /* ketebalan font tombol */
+    font-size: 14px; /* ukuran font tombol */
+    transition: background 0.3s; /* transisi warna yang halus */
+    margin-top: 14px; /* jarak di atas tombol */
+    width: 100%; /* tombol memenuhi lebar wadah */
+}
+
+.btn-copy:hover {
+    background: #424453; /* warna tombol saat disentuh */
+}
+
+.btn-copy.copied {
+    background: #424453; /* warna tombol setelah disalin */
+}
+
+/* media queries responsive */
+@media (max-width: 992px) {
+    .doa-grid-container {
+        grid-template-columns: repeat(2, 1fr); /* menjadi 2 kolom di layar sedang */
+    }
+}
+
+@media (max-width: 768px) {
+    .doa-header-controls {
+        flex-direction: column; /* kontrol disusun ke bawah di layar HP */
+        width: 100%; /* memenuhi lebar wadah penuh */
+    }
+
+    .doa-header-controls .search-input,
+    .doa-header-controls .filter-select {
+        width: 100%; /* elemen input/select memenuhi lebar penuh */
+    }
+
+    .doa-grid-container {
+        grid-template-columns: 1fr; /* menjadi 1 kolom di layar HP */
+    }
+
+    .doa-counter {
+        text-align: center; /* teks counter rata tengah */
+    }
+}
+
+@media (max-width: 480px) {
+    .doa-header-section {
+        padding: 20px; /* menyesuaikan ruang dalam header HP kecil */
+    }
+
+    .doa-modal-arabic {
+        font-size: 24px; /* memperkecil huruf arab pada pop-up */
+        padding: 10px; /* ruang dalam wadah arab menyempit */
+    }
+
+    .doa-modal-title {
+        font-size: 22px; /* memperkecil font judul modal */
+    }
+
+    .modal-doa {
+        max-width: 100% !important; /* modal memenuhi lebar layar penuh */
+    }
+}

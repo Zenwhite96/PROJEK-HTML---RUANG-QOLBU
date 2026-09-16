@@ -1,0 +1,1162 @@
+/* reset margin dan padding */
+* {
+    margin: 0; /* menghilangkan jarak luar bawaan browser */
+    padding: 0; /* menghilangkan jarak dalam bawaan browser */
+    box-sizing: border-box; /* elemen dihitung beserta border dan padding */
+    font-family: 'Poppins', sans-serif; /* jenis font standar seluruh halaman */
+}
+
+body {
+    background: linear-gradient(135deg, #A07366 0%, #DCA489 100%); /* warna latar gradien */
+    color: #333; /* warna dasar teks */
+    min-height: 100vh; /* tinggi minimal layar penuh */
+}
+
+/* header dan navigasi */
+.main-header {
+    display: flex; /* tata letak fleksibel menyamping */
+    justify-content: space-between; /* logo di kiri, menu di kanan */
+    align-items: center; /* sejajar vertikal di tengah */
+    padding: 15px 50px; /* ruang dalam header */
+    background-color: #ffffff; /* warna latar header */
+    border-bottom: 4px solid #424453; /* garis pembatas bawah */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* bayangan di bawah header */
+    position: sticky; /* menempel di atas saat discroll */
+    top: 0; /* batas tempel dari paling atas */
+    z-index: 100; /* posisi di atas elemen lain */
+}
+
+.brand-link {
+    display: flex; /* menyusun logo dan teks menyamping */
+    align-items: center; /* meratakan posisi vertikal */
+    text-decoration: none; /* menghilangkan garis bawah */
+    gap: 15px; /* jarak antara logo dan nama merek */
+}
+
+.brand-logo {
+    width: 50px; /* lebar bingkai logo */
+    height: 50px; /* tinggi bingkai logo */
+    border-radius: 50%; /* bentuk lingkaran sempurna */
+    overflow: hidden; /* memotong gambar yang meluap */
+    border: 2px solid #424453; /* garis tepi melingkar */
+    display: flex; /* memposisikan isi di tengah */
+    justify-content: center; /* rata tengah horizontal */
+    align-items: center; /* rata tengah vertikal */
+    flex-shrink: 0; /* mencegah logo mengecil */
+}
+
+.logo-img {
+    width: 100%; /* lebar gambar memenuhi bingkai */
+    height: 100%; /* tinggi gambar memenuhi bingkai */
+    object-fit: cover; /* memotong gambar agar proporsional */
+}
+
+.brand-name {
+    font-family: 'Playfair Display', serif; /* font dekoratif merek */
+    font-size: 28px; /* ukuran font nama merek */
+    color: #0F3040; /* warna biru gelap */
+}
+
+.nav-list {
+    list-style: none; /* menghilangkan simbol bullet */
+    display: flex; /* menyusun menu menyamping */
+    gap: 8px; /* jarak antar item menu */
+    align-items: center; /* meratakan posisi vertikal menu */
+}
+
+.nav-item {
+    text-decoration: none; /* menghilangkan garis bawah */
+    color: #555; /* warna teks menu standar */
+    font-weight: 600; /* ketebalan huruf menu */
+    padding: 8px 20px; /* ruang dalam tombol menu */
+    border-radius: 25px; /* bentuk tombol kapsul */
+    transition: all 0.3s ease; /* transisi efek yang halus */
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background-color: #0F3040; /* warna latar saat disentuh/aktif */
+    color: white; /* warna teks saat disentuh/aktif */
+    transform: translateY(-2px); /* efek tombol naik 2px */
+    box-shadow: 0 5px 15px rgba(15, 48, 64, 0.25); /* bayangan di bawah tombol */
+}
+
+.nav-item.active {
+    background-color: #424453; /* warna khusus menu aktif */
+}
+
+.main-content {
+    padding: 40px 50px; /* ruang dalam isi halaman */
+    max-width: 1200px; /* batas lebar maksimal isi */
+    margin: 0 auto; /* memposisikan konten di tengah */
+}
+
+/* welcome section */
+.welcome-section {
+    background: linear-gradient(135deg, #0F3040, #424453); /* warna gradien latar */
+    border-radius: 20px; /* sudut kotak melengkung */
+    padding: 60px 50px; /* ruang dalam spanduk */
+    margin-bottom: 40px; /* jarak ke elemen bawah */
+    box-shadow: 0 8px 30px rgba(15, 48, 64, 0.2); /* bayangan lembut */
+    animation: welcomeFadeIn 1s ease; /* animasi muncul saat dimuat */
+}
+
+.welcome-content {
+    text-align: center; /* teks posisi di tengah */
+}
+
+.welcome-title {
+    font-family: 'Playfair Display', serif; /* font judul utama */
+    font-size: 38px; /* ukuran font judul */
+    color: white; /* warna teks judul */
+    margin-bottom: 12px; /* jarak bawah judul */
+    font-weight: 700; /* ketebalan teks */
+    letter-spacing: 1px; /* jarak antar huruf */
+} 
+
+.welcome-title span {
+    color: #DCA489; /* warna khusus teks sorotan */
+}
+
+.welcome-subtitle {
+    font-size: 18px; /* ukuran font subjudul */
+    color: rgba(255, 255, 255, 0.85); /* warna teks transparan halus */
+    line-height: 1.7; /* jarak antar baris kalimat */
+    margin-bottom: 25px; /* jarak bawah subjudul */
+    font-weight: 300; /* ketebalan font tipis */
+}
+
+.welcome-features {
+    display: flex; /* menyusun label fitur menyamping */
+    justify-content: center; /* posisi di tengah horizontal */
+    gap: 30px; /* jarak antar label fitur */
+    margin-bottom: 30px; /* jarak bawah seksi fitur */
+    flex-wrap: wrap; /* pindah baris jika tidak muat */
+}
+
+.welcome-feature {
+    color: rgba(255, 255, 255, 0.8); /* warna teks label */
+    font-size: 14px; /* ukuran huruf label */
+    font-weight: 500; /* ketebalan font */
+    background: rgba(255, 255, 255, 0.08); /* latar belakang transparan */
+    padding: 6px 18px; /* ruang dalam label */
+    border-radius: 20px; /* sudut melengkung */
+    border: 1px solid rgba(255, 255, 255, 0.06); /* garis tepi tipis */
+}
+
+.welcome-cta {
+    display: flex; /* menyusun tombol aksi menyamping */
+    justify-content: center; /* memposisikan tombol di tengah */
+    gap: 15px; /* jarak antar tombol */
+    flex-wrap: wrap; /* pindah baris jika layar sempit */
+}
+
+.welcome-btn-primary {
+    display: inline-block; /* elemen tautan bisa diatur ukurannya */
+    background: #424453; /* warna latar tombol */
+    color: #DCA489; /* warna teks tombol */
+    padding: 12px 35px; /* ruang dalam tombol */
+    border-radius: 50px; /* bentuk kapsul penuh */
+    font-weight: 700; /* ketebalan teks */
+    font-size: 16px; /* ukuran font tombol */
+    text-decoration: none; /* menghilangkan garis bawah */
+    transition: all 0.3s ease; /* transisi efek yang halus */
+    box-shadow: 0 4px 15px rgba(66, 68, 83, 0.3); /* bayangan tombol */
+}
+
+.welcome-btn-primary:hover {
+    background: #A07366; /* warna latar saat disentuh */
+    color: white; /* warna teks saat disentuh */
+    transform: translateY(-3px); /* efek tombol naik 3px */
+    box-shadow: 0 8px 25px rgba(66, 68, 83, 0.4); /* bayangan lebih tajam */
+}
+
+.welcome-btn-secondary {
+    display: inline-block; /* elemen bisa diatur ukurannya */
+    background: transparent; /* latar belakang transparan */
+    color: white; /* warna teks tombol */
+    padding: 12px 35px; /* ruang dalam tombol */
+    border-radius: 50px; /* bentuk kapsul penuh */
+    font-weight: 600; /* ketebalan font */
+    font-size: 16px; /* ukuran font */
+    text-decoration: none; /* menghilangkan garis bawah */
+    transition: all 0.3s ease; /* transisi efek yang halus */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* garis tepi tombol */
+}
+
+.welcome-btn-secondary:hover {
+    border-color: #DCA489; /* warna garis tepi saat disentuh */
+    color: #DCA489; /* warna teks saat disentuh */
+    transform: translateY(-3px); /* efek tombol terangkat naik */
+}
+
+/* animasi kemunculan */
+@keyframes welcomeFadeIn {
+    0% { opacity: 0; transform: translateY(-20px); } /* batas awal transparan dan di atas */
+    100% { opacity: 1; transform: translateY(0); } /* batas akhir jelas dan di posisi asli */
+}
+
+/* hero section */
+.hero-section {
+    display: flex; /* menyusun kartu berdampingan */
+    gap: 40px; /* jarak antar kartu */
+    margin-bottom: 60px; /* jarak ke seksi bawah */
+}
+
+.feature-card {
+    flex: 1; /* membagi lebar sama rata */
+    background: white; /* warna latar kartu */
+    border-radius: 16px; /* sudut melengkung */
+    display: flex; /* isi kartu fleksibel menyamping */
+    gap: 25px; /* jarak antara gambar dan teks */
+    padding: 25px; /* ruang dalam kartu */
+    border: 1px solid rgba(66, 68, 83, 0.25); /* garis pembatas kartu */
+    min-height: 220px; /* tinggi minimal kartu */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); /* bayangan lembut */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* transisi pergerakan */
+}
+
+.feature-card:hover {
+    transform: translateY(-8px); /* efek terangkat saat disentuh */
+    box-shadow: 0 20px 35px rgba(15, 48, 64, 0.15); /* bayangan membesar */
+}
+
+.card-image-box {
+    width: 50%; /* setengah dari lebar kartu */
+    border-radius: 12px; /* sudut gambar melengkung */
+    overflow: hidden; /* memotong gambar yang meluap */
+}
+
+.card-img {
+    width: 100%; /* lebar gambar penuh */
+    height: 100%; /* tinggi gambar penuh */
+    object-fit: cover; /* gambar terpotong rapi */
+    transition: transform 0.5s ease; /* transisi efek zoom gambar */
+}
+
+.feature-card:hover .card-img {
+    transform: scale(1.05); /* gambar membesar 5% saat disentuh */
+} 
+
+.card-description {
+    width: 50%; /* setengah dari lebar kartu */
+    display: flex; /* menyusun teks secara vertikal */
+    flex-direction: column; /* urutan dari atas ke bawah */
+    justify-content: center; /* posisikan teks di tengah vertikal */
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif; /* font judul kartu */
+    font-size: 24px; /* ukuran font judul */
+    color: #0F3040; /* warna judul */
+    margin-bottom: 10px; /* jarak bawah judul */
+}
+
+.card-text {
+    font-size: 14px; /* ukuran font deskripsi */
+    line-height: 1.7; /* jarak antar baris teks */
+    color: #666; /* warna teks abu-abu */
+    margin-bottom: 12px; /* jarak bawah teks */
+}
+
+.card-btn {
+    display: inline-block; /* agar bisa diberi batas ukuran */
+    padding: 8px 20px; /* ruang dalam tombol */
+    background-color: #0F3040; /* warna latar tombol */
+    color: white; /* warna teks tombol */
+    text-decoration: none; /* menghilangkan garis bawah */
+    border-radius: 25px; /* bentuk tombol melengkung */
+    font-weight: 600; /* ketebalan teks tombol */
+    font-size: 14px; /* ukuran huruf tombol */
+    transition: background 0.3s; /* transisi warna yang halus */
+    align-self: flex-start; /* menahan lebar tombol sesuai teks */
+}
+
+.card-btn:hover {
+    background-color: #424453; /* warna latar tombol saat disentuh */
+}
+
+/* statistik section */
+.stats-section {
+    background: linear-gradient(135deg, #0F3040, #424453); /* warna latar gradien */
+    border-radius: 16px; /* sudut melengkung */
+    padding: 30px 40px; /* ruang dalam seksi */
+    margin-bottom: 40px; /* jarak bawah seksi */
+    box-shadow: 0 4px 20px rgba(15, 48, 64, 0.15); /* bayangan halus */
+}
+
+.stats-container {
+    display: flex; /* menyusun item secara horizontal */
+    justify-content: center; /* posisi item di tengah */
+    align-items: center; /* meratakan posisi vertikal */
+    gap: 40px; /* jarak antar statistik */
+    flex-wrap: wrap; /* pindah baris jika layar menyempit */
+}
+
+.stats-item {
+    text-align: center; /* teks posisi di tengah */
+}
+
+.stats-number {
+    display: block; /* menampilkan pada baris terpisah */
+    font-family: 'Playfair Display', serif; /* font angka statistik */
+    font-size: 36px; /* ukuran angka besar */
+    font-weight: 700; /* ketebalan angka */
+    color: #DCA489; /* warna khusus angka */
+    line-height: 1.2; /* jarak baris angka */
+}
+
+.stats-label {
+    font-size: 14px; /* ukuran teks keterangan */
+    color: rgba(255, 255, 255, 0.7); /* warna teks transparan */
+    font-weight: 400; /* ketebalan font standar */
+}
+
+.stats-divider {
+    width: 2px; /* lebar garis pemisah */
+    height: 50px; /* tinggi garis pemisah */
+    background: rgba(255, 255, 255, 0.15); /* warna garis transparan */
+}
+
+/* quote bergulir */
+.quote-carousel-section {
+    background: white; /* latar belakang putih */
+    border-radius: 16px; /* sudut kotak melengkung */
+    padding: 35px 40px; /* ruang dalam seksi */
+    margin-bottom: 40px; /* jarak bawah seksi */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* bayangan lembut */
+    border: 1px solid rgba(66, 68, 83, 0.2); /* garis pembatas tipis */
+    text-align: center; /* teks posisi di tengah */
+}
+
+.quote-carousel {
+    min-height: 120px; /* tinggi minimal area kutipan */
+}
+
+.quote-slide {
+    display: none; /* sembunyikan slide secara default */
+    animation: fadeQuote 0.8s ease; /* animasi pemudaran saat berganti */
+}
+
+.quote-slide.active {
+    display: block; /* tampilkan slide yang sedang aktif */
+}
+
+@keyframes fadeQuote {
+    0% { opacity: 0; transform: translateY(10px); } /* batas awal transparan */
+    100% { opacity: 1; transform: translateY(0); } /* batas akhir jelas */
+}
+
+.quote-text {
+    font-family: 'Playfair Display', serif; /* font kutipan */
+    font-size: 24px; /* ukuran huruf kutipan */
+    color: #0F3040; /* warna teks kutipan */
+    font-weight: 600; /* ketebalan font */
+    line-height: 1.6; /* jarak baris teks */
+    margin-bottom: 8px; /* jarak bawah kutipan */
+}
+
+.quote-source {
+    font-size: 16px; /* ukuran huruf sumber kutipan */
+    color: #888; /* warna teks sumber abu-abu */
+    font-weight: 400; /* ketebalan font normal */
+}
+
+/* section video */
+.section-subtitle {
+    font-family: 'Playfair Display', serif; /* font subjudul seksi */
+    font-size: 24px; /* ukuran font subjudul */
+    color: #0F3040; /* warna subjudul */
+    border-bottom: 3px solid #424453; /* garis bawah judul */
+    padding-bottom: 8px; /* jarak teks ke garis bawah */
+    margin-bottom: 25px; /* jarak ke elemen bawah */
+    display: inline-block; /* lebar garis menyesuaikan teks */
+}
+
+.subtitle-center {
+    display: block; /* mengambil baris secara penuh */
+    text-align: center; /* teks posisi di tengah */
+    border-bottom: none; /* menghilangkan garis bawah */
+    margin-bottom: 25px; /* jarak bawah */
+}
+
+.video-section {
+    margin-bottom: 60px; /* jarak bawah seksi */
+    background: white; /* latar belakang putih */
+    padding: 35px; /* ruang dalam seksi */
+    border-radius: 16px; /* sudut melengkung */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* bayangan halus */
+    border: 1px solid rgba(66, 68, 83, 0.25); /* garis pembatas */
+    text-align: center; /* teks posisi di tengah */
+}
+
+.video-container {
+    position: relative; /* acuan posisi elemen di dalamnya */
+    width: 100%; /* lebar wadah maksimal */
+    max-width: 850px; /* batas lebar maksimal video */
+    margin: 0 auto; /* memposisikan di tengah */
+    aspect-ratio: 16 / 9; /* menjaga rasio video 16:9 */
+    border-radius: 12px; /* sudut video melengkung */
+    overflow: hidden; /* memotong isi yang keluar */
+    box-shadow: 0 10px 25px rgba(15, 48, 64, 0.15); /* bayangan video */
+}
+
+.youtube-video {
+    position: absolute; /* menempel sesuai batas pembungkus */
+    top: 0; /* posisi di paling atas */
+    left: 0; /* posisi di paling kiri */
+    width: 100%; /* memenuhi lebar wadah */
+    height: 100%; /* memenuhi tinggi wadah */
+    border: none; /* tanpa garis bingkai */
+}
+
+.video-caption {
+    margin-top: 20px; /* jarak di atas keterangan */
+    font-size: 15px; /* ukuran huruf keterangan */
+    color: #555; /* warna teks abu-abu */
+    font-weight: 500; /* ketebalan font */
+}
+
+/* kajian ustadz */
+.lecture-section {
+    margin-bottom: 60px; /* jarak bawah seksi */
+    background: white; /* latar belakang putih */
+    padding: 35px; /* ruang dalam seksi */
+    border-radius: 16px; /* sudut melengkung */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* bayangan lembut */
+    border: 1px solid rgba(66, 68, 83, 0.25); /* garis pembatas */
+}
+
+.lecture-grid {
+    display: grid; /* menggunakan tata letak grid */
+    grid-template-columns: repeat(3, 1fr); /* membagi rata menjadi 3 kolom */
+    gap: 20px; /* jarak antar kartu kajian */
+    margin-top: 10px; /* jarak di atas grid */
+}
+
+.lecture-card {
+    display: flex; /* menyusun isi kartu menyamping */
+    align-items: center; /* meratakan posisi vertikal */
+    gap: 15px; /* jarak antara gambar dan teks */
+    padding: 15px; /* ruang dalam kartu */
+    background-color: #f8fafc; /* warna latar kartu */
+    border-radius: 12px; /* sudut kartu melengkung */
+    text-decoration: none; /* menghilangkan garis bawah */
+    border: 1px solid #e2e8f0; /* garis tepi kartu */
+    transition: all 0.3s ease; /* transisi efek yang halus */
+}
+
+.lecture-card:hover {
+    transform: translateY(-4px); /* efek kartu naik 4px */
+    box-shadow: 0 8px 20px rgba(15, 48, 64, 0.12); /* bayangan membesar */
+    border-color: #424453; /* warna garis tepi saat disentuh */
+}
+
+.lecture-thumb {
+    width: 100px; /* lebar gambar miniatur */
+    height: 70px; /* tinggi gambar miniatur */
+    object-fit: cover; /* gambar terpotong rapi */
+    border-radius: 8px; /* sudut gambar melengkung */
+    flex-shrink: 0; /* mencegah gambar mengecil */
+    border: 2px solid #424453; /* garis tepi gambar */
+}
+
+.lecture-info {
+    display: flex; /* menyusun teks secara vertikal */
+    flex-direction: column; /* urutan teks dari atas ke bawah */
+    justify-content: center; /* posisi tengah secara vertikal */
+}
+
+.lecture-title {
+    font-size: 14px; /* ukuran huruf judul */
+    font-weight: 700; /* ketebalan font judul */
+    color: #0F3040; /* warna huruf judul */
+    margin-bottom: 4px; /* jarak bawah judul */
+    line-height: 1.3; /* jarak baris teks */
+}
+
+.lecture-desc {
+    font-size: 12px; /* ukuran huruf deskripsi */
+    color: #666; /* warna teks abu-abu */
+    font-weight: 500; /* ketebalan font deskripsi */
+}
+
+/* surah populer dan doa harian */
+.bottom-section {
+    display: flex; /* menyusun dua bagian berdampingan */
+    gap: 30px; /* jarak antar bagian */
+    margin-bottom: 40px; /* jarak bawah seksi */
+    align-items: stretch; /* tinggi kedua bagian sejajar */
+}
+
+.content-list-wrapper {
+    flex: 1; /* membagi lebar sama rata */
+    display: flex; /* menyusun isi secara fleksibel */
+    flex-direction: column; /* urutan dari atas ke bawah */
+}
+
+.grid-container {
+    display: grid; /* menggunakan tata letak grid */
+    grid-template-columns: repeat(2, 1fr); /* membagi menjadi 2 kolom */
+    gap: 16px; /* jarak antar item kartu */
+    height: 100%; /* memenuhi tinggi wadah */
+}
+
+.grid-item {
+    background: white; /* latar belakang kartu */
+    border: 1px solid rgba(66, 68, 83, 0.25); /* garis tepi kartu */
+    border-left: 5px solid #424453; /* garis tebal di sisi kiri */
+    border-radius: 12px; /* sudut melengkung */
+    width: 100%; /* lebar penuh memenuhi grid */
+    min-height: 105px; /* tinggi minimal kartu */
+    display: flex; /* menyusun isi kartu */
+    flex-direction: column; /* teks dari atas ke bawah */
+    justify-content: center; /* posisi tengah secara vertikal */
+    padding: 16px 18px; /* ruang dalam kartu */
+    cursor: pointer; /* mengubah kursor menjadi telunjuk */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03); /* bayangan kartu */
+    transition: all 0.3s ease; /* transisi efek yang halus */
+}
+
+.grid-item:hover {
+    transform: translateY(-4px); /* kartu naik 4px saat disentuh */
+    box-shadow: 0 8px 20px rgba(15, 48, 64, 0.10); /* bayangan membesar */
+    border-left-color: #0F3040; /* warna garis kiri saat disentuh */
+}
+
+.item-title {
+    font-weight: 700; /* ketebalan judul item */
+    color: #0F3040; /* warna judul item */
+    margin-bottom: 6px; /* jarak bawah judul */
+    font-size: 15px; /* ukuran font judul */
+    line-height: 1.3; /* jarak baris judul */
+    display: -webkit-box; /* batasan baris tampilan */
+    -webkit-line-clamp: 2; /* batas maksimal 2 baris teks */
+    -webkit-box-orient: vertical; /* arah potongan vertikal */
+    overflow: hidden; /* sembunyikan teks yang meluap */
+}
+
+.item-desc,
+.item-recommendation {
+    font-size: 13px; /* ukuran font keterangan */
+    color: #424453; /* warna huruf keterangan */
+    font-style: italic; /* gaya huruf miring */
+    font-weight: 500; /* ketebalan font */
+    white-space: nowrap; /* teks tetap dalam satu baris */
+    overflow: hidden; /* sembunyikan teks meluap */
+    text-overflow: ellipsis; /* mengubah teks panjang menjadi (...) */
+}
+
+.loading-text {
+    color: #666; /* warna teks abu-abu */
+    font-size: 14px; /* ukuran huruf pesan loading */
+    padding: 10px 0; /* ruang atas dan bawah */
+}
+
+/* modal container */
+.modal-container {
+    display: none; /* sembunyikan jendela pop-up awal */
+    position: fixed; /* menempel di posisi layar tetap */
+    top: 0; /* memenuhi batas atas */
+    left: 0; /* memenuhi batas kiri */
+    right: 0; /* memenuhi batas kanan */
+    bottom: 0; /* memenuhi batas bawah */
+    background-color: rgba(0, 0, 0, 0.7); /* latar belakang hitam transparan */
+    z-index: 1000; /* tampil di posisi paling depan */
+    justify-content: center; /* posisikan pop-up di tengah horizontal */
+    align-items: center; /* posisikan pop-up di tengah vertikal */
+    padding: 20px; /* ruang dalam batas layar */
+}
+
+.modal-content {
+    background-color: white; /* latar belakang jendela pop-up */
+    width: 100%; /* lebar fleksibel */
+    max-width: 600px; /* lebar maksimal jendela pop-up */
+    max-height: 85vh; /* tinggi maksimal 85% dari layar */
+    overflow-y: auto; /* munculkan scrollbar jika teks panjang */
+    border-radius: 16px; /* sudut jendela melengkung */
+    padding: 30px; /* ruang dalam jendela pop-up */
+    position: relative; /* acuan elemen internal */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* bayangan tegas */
+}
+
+.close-modal-btn {
+    background-color: #0F3040; /* warna latar tombol tutup */
+    color: white; /* warna teks tombol */
+    border: none; /* tanpa garis tepi */
+    padding: 10px 20px; /* ruang dalam tombol */
+    border-radius: 8px; /* sudut melengkung */
+    cursor: pointer; /* kursor menjadi telunjuk */
+    font-weight: 700; /* ketebalan teks */
+    margin-bottom: 15px; /* jarak bawah tombol */
+    width: 100%; /* memenuhi lebar wadah */
+    transition: background 0.3s; /* transisi warna halus */
+    font-size: 15px; /* ukuran huruf tombol */
+}
+
+.close-modal-btn:hover {
+    background-color: #424453; /* warna tombol saat disentuh */
+}
+
+.arabic-text {
+    font-family: 'Amiri', 'Arial', serif; /* font khusus tulisan arab */
+    font-size: 28px; /* ukuran huruf arab */
+    text-align: right; /* teks rata kanan */
+    color: #0F3040; /* warna tulisan arab */
+    margin: 15px 0 10px 0; /* jarak atas dan bawah */
+    line-height: 1.8; /* jarak antar baris arab */
+}
+
+.latin-text {
+    font-size: 15px; /* ukuran huruf latin */
+    color: #555; /* warna teks abu-abu */
+    margin-bottom: 10px; /* jarak bawah */
+    font-style: italic; /* huruf dicetak miring */
+    padding-bottom: 10px; /* ruang bawah */
+    border-bottom: 1px dashed #ddd; /* garis putus-putus pembatas */
+}
+
+.audio-player {
+    width: 100%; /* lebar pemutar audio penuh */
+    margin: 10px 0 15px 0; /* jarak atas dan bawah */
+    outline: none; /* menghilangkan garis fokus */
+}
+
+/* jadwal sholat */
+.shalat-section {
+    margin-bottom: 40px; /* jarak bawah seksi */
+}
+
+.shalat-container {
+    background: white; /* latar belakang putih */
+    border-radius: 16px; /* sudut melengkung */
+    padding: 30px 35px; /* ruang dalam wadah */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* bayangan lembut */
+    border: 1px solid rgba(66, 68, 83, 0.2); /* garis tepi */
+}
+
+.shalat-header {
+    display: flex; /* menyusun isi header menyamping */
+    justify-content: space-between; /* lokasi di kiri, kontrol di kanan */
+    align-items: center; /* meratakan posisi vertikal */
+    flex-wrap: wrap; /* pindah baris jika ruang sempit */
+    gap: 16px; /* jarak antar elemen header */
+    margin-bottom: 20px; /* jarak bawah header */
+    padding-bottom: 16px; /* ruang bawah header */
+    border-bottom: 2px dashed #A07366; /* garis putus-putus pembatas */
+}
+
+.shalat-location {
+    display: flex; /* menyusun nama kota dan tanggal */
+    flex-direction: column; /* teks disusun ke bawah */
+    gap: 2px; /* jarak antara kota dan tanggal */
+}
+
+.shalat-kota {
+    font-family: 'Playfair Display', serif; /* font nama kota */
+    font-size: 22px; /* ukuran font kota */
+    font-weight: 700; /* ketebalan font */
+    color: #0F3040; /* warna huruf nama kota */
+}
+
+.shalat-tanggal {
+    font-size: 14px; /* ukuran huruf tanggal */
+    color: #888; /* warna teks abu-abu */
+    font-weight: 500; /* ketebalan font */
+}
+
+.shalat-controls {
+    display: flex; /* menyusun opsi pilihan menyamping */
+    align-items: center; /* meratakan posisi vertikal */
+    gap: 12px; /* jarak antar dropdown */
+    flex-wrap: wrap; /* pindah baris jika tidak muat */
+}
+
+.shalat-controls .filter-select {
+    min-width: 160px; /* lebar minimal dropdown */
+    padding: 8px 16px; /* ruang dalam dropdown */
+    border-radius: 30px; /* bentuk sudut melengkung */
+    border: 2px solid #A07366; /* garis tepi dropdown */
+    font-size: 14px; /* ukuran huruf opsi */
+    font-weight: 600; /* ketebalan font */
+    color: #0F3040; /* warna huruf opsi */
+    background: white; /* latar belakang putih */
+    outline: none; /* menghilangkan garis fokus */
+    cursor: pointer; /* kursor menjadi telunjuk */
+    transition: all 0.3s; /* transisi efek halus */
+}
+
+.shalat-controls .filter-select:focus {
+    border-color: #0F3040; /* warna garis saat dipilih */
+    box-shadow: 0 0 0 4px rgba(15, 48, 64, 0.10); /* efek pendaran fokus */
+}
+
+.shalat-controls .filter-select:disabled {
+    opacity: 0.5; /* transparansi saat tidak aktif */
+    cursor: not-allowed; /* kursor tanda tidak bisa diklik */
+}
+
+.shalat-grid {
+    display: grid; /* menggunakan tata letak grid */
+    grid-template-columns: repeat(6, 1fr); /* membagi menjadi 6 kolom waktu */
+    gap: 14px; /* jarak antar kartu waktu sholat */
+}
+
+.shalat-item {
+    background: #F8FAFC; /* latar belakang kartu waktu */
+    border-radius: 12px; /* sudut melengkung */
+    padding: 16px 10px; /* ruang dalam kartu */
+    text-align: center; /* teks posisi di tengah */
+    border: 1px solid #e8edf2; /* garis tepi kartu */
+    transition: all 0.3s ease; /* transisi efek yang halus */
+}
+
+.shalat-item:hover {
+    transform: translateY(-3px); /* efek terangkat 3px */
+    box-shadow: 0 6px 18px rgba(15, 48, 64, 0.08); /* bayangan membesar */
+    border-color: #424453; /* warna garis saat disentuh */
+}
+
+.shalat-item .waktu-label {
+    display: block; /* menampilkan pada baris terpisah */
+    font-size: 13px; /* ukuran huruf nama waktu */
+    font-weight: 600; /* ketebalan font */
+    color: #0F3040; /* warna teks nama waktu */
+    text-transform: uppercase; /* mengubah teks menjadi kapital */
+    letter-spacing: 0.5px; /* jarak antar huruf */
+    margin-bottom: 4px; /* jarak bawah label */
+}
+
+.shalat-item .waktu-jam {
+    display: block; /* menampilkan pada baris terpisah */
+    font-family: 'Playfair Display', serif; /* font angka jam sholat */
+    font-size: 22px; /* ukuran font jam */
+    font-weight: 700; /* ketebalan font jam */
+    color: #0F3040; /* warna huruf jam */
+}
+
+.shalat-item .waktu-ikon {
+    font-size: 22px; /* ukuran ikon waktu sholat */
+    display: block; /* tampil pada baris terpisah */
+    margin-bottom: 4px; /* jarak di bawah ikon */
+}
+
+/* footer */
+.site-footer {
+    background-color: #0F3040; /* warna latar belakang footer */
+    color: white; /* warna teks footer */
+    padding: 40px 50px; /* ruang dalam footer */
+    margin-top: 20px; /* jarak di atas footer */
+    border-top: 5px solid #424453; /* garis tebal di atas footer */
+}
+
+.footer-container {
+    display: flex; /* menyusun kolom footer menyamping */
+    justify-content: space-between; /* memberi jarak sejajar antar kolom */
+    gap: 30px; /* jarak antar kolom footer */
+    max-width: 1200px; /* lebar maksimal footer */
+    margin: 0 auto; /* memposisikan di tengah */
+}
+
+.footer-box {
+    flex: 1; /* membagi lebar kolom sama rata */
+}
+
+.footer-title {
+    color: #DCA489; /* warna judul kolom footer */
+    margin-bottom: 15px; /* jarak bawah judul */
+    font-family: 'Playfair Display', serif; /* font judul footer */
+}
+
+.footer-box ul {
+    list-style: none; /* menghilangkan simbol daftar bullet */
+    padding: 0; /* menghilangkan padding daftar */
+    margin: 0; /* menghilangkan margin daftar */
+}
+
+.footer-box li {
+    margin-bottom: 8px; /* jarak antar item daftar */
+}
+
+.footer-box a {
+    color: white; /* warna tautan footer */
+    text-decoration: none; /* menghilangkan garis bawah */
+    transition: color 0.3s ease; /* transisi warna yang halus */
+}
+
+.footer-box a:hover {
+    color: #DCA489; /* warna tautan saat disentuh */
+}
+
+.footer-bottom {
+    text-align: center; /* teks posisi di tengah */
+    margin-top: 30px; /* jarak di atas hak cipta */
+    border-top: 1px solid rgba(255, 255, 255, 0.25); /* garis pembatas tipis */
+    padding-top: 15px; /* ruang di atas teks hak cipta */
+    font-size: 14px; /* ukuran font hak cipta */
+    max-width: 1200px; /* lebar maksimal teks */
+    margin-left: auto; /* memposisikan di tengah */
+    margin-right: auto; /* memposisikan di tengah */
+}
+
+/* sidebar dan element mobile */
+.hamburger-btn {
+    font-size: 22px; /* ukuran huruf ikon hamburger */
+    padding: 6px 12px; /* ruang dalam tombol */
+    background: #0F3040; /* warna latar tombol */
+    border: none; /* tanpa garis bingkai */
+    color: white; /* warna ikon hamburger */
+    border-radius: 8px; /* sudut melengkung */
+    cursor: pointer; /* kursor menjadi telunjuk */
+    transition: all 0.3s ease; /* transisi efek yang halus */
+    z-index: 101; /* tampil di atas elemen lain */
+    margin-left: auto; /* memposisikan di sebelah kanan */
+    line-height: 1; /* tinggi baris ikon sejajar */
+}
+
+.hamburger-btn:hover {
+    background: #424453; /* warna tombol saat disentuh */
+}
+
+.sidebar-overlay {
+    display: none; /* sembunyikan latar gelap awal */
+    position: fixed; /* menempel di posisi layar tetap */
+    top: 0; /* memenuhi batas atas */
+    left: 0; /* memenuhi batas kiri */
+    width: 100%; /* memenuhi lebar layar */
+    height: 100%; /* memenuhi tinggi layar */
+    background: rgba(0, 0, 0, 0.5); /* latar transparan gelap */
+    z-index: 998; /* di belakang menu samping */
+}
+
+.sidebar-overlay.active {
+    display: block; /* tampilkan latar gelap saat aktif */
+}
+
+.sidebar {
+    position: fixed; /* posisi tetap di layar */
+    top: 0; /* memenuhi batas atas */
+    right: -320px; /* disembunyikan di luar layar kanan */
+    width: 300px; /* lebar menu samping */
+    height: 100%; /* memenuhi tinggi layar */
+    background: linear-gradient(135deg, #0F3040, #424453); /* warna latar gradien */
+    z-index: 999; /* tampil di depan latar gelap */
+    padding: 80px 25px 30px; /* ruang dalam menu samping */
+    transition: right 0.4s ease; /* transisi geser menu */
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2); /* bayangan menu samping */
+    overflow-y: auto; /* munculkan scrollbar jika menu panjang */
+}
+
+.sidebar.active {
+    right: 0; /* menggeser menu masuk ke layar */
+}
+
+.sidebar-close {
+    position: absolute; /* posisi bebas di dalam menu */
+    top: 15px; /* jarak dari batas atas */
+    right: 20px; /* jarak dari batas kanan */
+    background: none; /* latar transparan */
+    border: none; /* tanpa garis pembatas */
+    color: white; /* warna tombol silang */
+    font-size: 30px; /* ukuran tombol silang */
+    cursor: pointer; /* kursor menjadi telunjuk */
+    transition: transform 0.3s ease; /* transisi efek putar */
+}
+
+.sidebar-close:hover {
+    transform: rotate(90deg); /* berputar 90 derajat saat disentuh */
+}
+
+.sidebar-menu {
+    display: flex; /* menyusun daftar menu */
+    flex-direction: column; /* menu disusun ke bawah */
+    gap: 10px; /* jarak antar opsi menu */
+}
+
+.sidebar-menu a {
+    color: rgba(255, 255, 255, 0.85); /* warna teks menu */
+    text-decoration: none; /* menghilangkan garis bawah */
+    font-size: 20px; /* ukuran huruf opsi menu */
+    font-weight: 500; /* ketebalan font */
+    padding: 14px 18px; /* ruang dalam item menu */
+    border-radius: 10px; /* sudut melengkung */
+    transition: all 0.3s ease; /* transisi efek yang halus */
+    font-family: 'Poppins', sans-serif; /* font menu samping */
+}
+
+.sidebar-menu a:hover {
+    background: rgba(255, 255, 255, 0.12); /* warna latar saat disentuh */
+    padding-left: 28px; /* geser teks ke kanan saat disentuh */
+    color: #DCA489; /* warna teks saat disentuh */
+}
+
+.sidebar-menu a.active {
+    background: #DCA489; /* warna latar menu aktif */
+    color: #0F3040; /* warna teks menu aktif */
+}
+
+/* media queries */
+
+/* tampilan tablet / layar sedang (maksimal 992px) */
+@media (max-width: 992px) {
+    .bottom-section,
+    .hero-section {
+        flex-direction: column; /* mengubah posisi menjadi vertikal ke bawah */
+        gap: 35px; /* jarak antar elemen */
+    }
+
+    .lecture-grid,
+    .shalat-grid {
+        grid-template-columns: repeat(2, 1fr); /* mengubah grid dari 3/6 menjadi 2 kolom */
+    }
+}
+
+/* tampilan hp / perangkat seluler (maksimal 768px) */
+@media (max-width: 768px) {
+    .main-header { 
+        flex-direction: row; /* header tetap dalam baris horizontal */
+        gap: 15px; /* jarak antar elemen header */
+        padding: 15px 20px; /* ruang dalam header menyempit */
+    }
+
+    .main-content {
+        padding: 20px; /* ruang dalam konten utama menyempit */
+    }
+
+    .nav-list {
+        display: none !important; /* sembunyikan menu desktop */
+    }
+
+    .feature-card {
+        flex-direction: column; /* gambar dan teks disusun ke bawah */
+    }
+
+    .card-image-box,
+    .card-description {
+        width: 100%; /* memenuhi lebar penuh kartu */
+    }
+
+    .lecture-grid {
+        grid-template-columns: 1fr; /* mengubah tampilan kajian menjadi 1 kolom */
+    }
+
+    .grid-item {
+        width: 100%; /* memenuhi lebar wadah */
+    }
+
+    .footer-container {
+        flex-direction: column; /* kolom footer disusun ke bawah */
+        text-align: center; /* teks footer rata tengah */
+    }
+
+    .footer-box ul {
+        display: flex; /* daftar menu footer menyamping */
+        flex-wrap: wrap; /* pindah baris jika tidak muat */
+        justify-content: center; /* posisikan di tengah */
+        gap: 10px; /* jarak antar tautan footer */
+    }
+
+    .footer-box li {
+        margin-bottom: 0; /* menghilangkan jarak bawah item */
+    }
+
+    .video-section,
+    .lecture-section,
+    .stats-section,
+    .quote-carousel-section {
+        padding: 20px; /* menyesuaikan ruang dalam seksi */
+    }
+
+    .welcome-section {
+        padding: 40px 25px; /* menyesuaikan ruang dalam spanduk */
+    }
+
+    .welcome-title {
+        font-size: 28px; /* memperkecil ukuran judul */
+    }
+
+    .welcome-subtitle {
+        font-size: 16px; /* memperkecil ukuran subjudul */
+    }
+
+    .welcome-features {
+        gap: 12px; /* memperkecil jarak antar label fitur */
+    }
+
+    .welcome-feature {
+        font-size: 12px; /* memperkecil huruf label fitur */
+        padding: 4px 14px; /* menyesuaikan ruang dalam label */
+    }
+
+    .welcome-cta {
+        flex-direction: column; /* tombol disusun ke bawah */
+        align-items: center; /* posisikan tombol di tengah */
+    }
+
+    .welcome-btn-primary,
+    .welcome-btn-secondary {
+        width: 100%; /* tombol memenuhi lebar wadah */
+        max-width: 280px; /* batas lebar maksimal tombol */
+        text-align: center; /* teks tombol rata tengah */
+    }
+
+    .stats-container {
+        gap: 20px; /* memperkecil jarak antar statistik */
+    }
+
+    .stats-number {
+        font-size: 28px; /* memperkecil angka statistik */
+    }
+
+    .stats-divider {
+        height: 35px; /* memperpendek garis pemisah */
+    }
+
+    .quote-text {
+        font-size: 20px; /* memperkecil huruf kutipan */
+    }
+
+    .quote-carousel {
+        min-height: 100px; /* menyesuaikan tinggi area kutipan */
+    }
+
+    .shalat-container {
+        padding: 20px 18px; /* menyesuaikan ruang dalam wadah sholat */
+    }
+
+    .shalat-header {
+        flex-direction: column; /* header sholat disusun ke bawah */
+        align-items: stretch; /* memenuhi lebar wadah */
+        text-align: center; /* teks rata tengah */
+    }
+
+    .shalat-controls {
+        flex-direction: column; /* dropdown disusun ke bawah */
+        align-items: stretch; /* memenuhi lebar wadah */
+        justify-content: center; /* posisikan di tengah */
+    }
+
+    .shalat-controls .filter-select {
+        width: 100%; /* dropdown memenuhi lebar penuh */
+        max-width: 100%; /* batas lebar maksimal */
+    }
+
+    .shalat-grid {
+        grid-template-columns: repeat(2, 1fr); /* grid sholat menjadi 2 kolom */
+        gap: 12px; /* jarak antar kartu sholat */
+    }
+
+    .shalat-item .waktu-jam {
+        font-size: 18px; /* memperkecil ukuran teks jam sholat */
+    }
+}
+
+/* tampilan hp layar kecil (maksimal 480px) */
+@media (max-width: 480px) {
+    .brand-name {
+        font-size: 20px; /* memperkecil nama merek */
+    }
+
+    .brand-logo {
+        width: 40px; /* memperkecil lebar bingkai logo */
+        height: 40px; /* memperkecil tinggi bingkai logo */
+    }
+
+    .nav-item {
+        padding: 6px 14px; /* menyesuaikan ruang dalam tombol menu */
+        font-size: 13px; /* memperkecil huruf menu */
+    }
+
+    .card-title {
+        font-size: 20px; /* memperkecil judul kartu */
+    }
+
+    .welcome-section {
+        padding: 30px 18px; /* menyesuaikan ruang dalam spanduk */
+        border-radius: 14px; /* memperkecil kelengkungan sudut */
+    }
+
+    .welcome-title {
+        font-size: 24px; /* memperkecil huruf judul utama */
+    }
+
+    .welcome-subtitle {
+        font-size: 14px; /* memperkecil huruf subjudul */
+    }
+
+    .stats-container {
+        gap: 12px; /* memperkecil jarak antar statistik */
+    }
+
+    .stats-number {
+        font-size: 22px; /* memperkecil angka statistik */
+    }
+
+    .stats-label {
+        font-size: 12px; /* memperkecil keterangan statistik */
+    }
+
+    .stats-divider {
+        height: 25px; /* memperpendek garis pemisah */
+    }
+
+    .quote-text {
+        font-size: 17px; /* memperkecil huruf kutipan */
+    }
+
+    .quote-source {
+        font-size: 14px; /* memperkecil huruf sumber */
+    }
+
+    .quote-carousel-section {
+        padding: 15px; /* menyesuaikan ruang dalam seksi */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* kartu surah/doa menjadi 1 kolom */
+    }
+
+    .shalat-container {
+        padding: 16px 12px; /* menyesuaikan ruang dalam wadah sholat */
+    }
+
+    .shalat-controls .filter-select {
+        max-width: 220px; /* batas lebar maksimal dropdown */
+    }
+
+    .shalat-grid {
+        gap: 10px; /* memperkecil jarak antar kartu sholat */
+    }
+
+    .shalat-item {
+        padding: 12px 6px; /* ruang dalam kartu sholat */
+    }
+
+    .shalat-item .waktu-jam {
+        font-size: 16px; /* memperkecil ukuran jam sholat */
+    }
+
+    .shalat-item .waktu-label {
+        font-size: 11px; /* memperkecil label waktu sholat */
+    }
+
+    .shalat-kota {
+        font-size: 18px; /* memperkecil nama kota */
+    }
+}
+
+/* tampilan komputer / desktop (minimal 769px) */
+@media (min-width: 769px) {
+    .hamburger-btn {
+        display: none !important; /* sembunyikan tombol hamburger */
+    }
+    
+    .nav-list {
+        display: flex !important; /* tampilkan menu navigasi biasa */
+    }
+}
+
+
+
+
+

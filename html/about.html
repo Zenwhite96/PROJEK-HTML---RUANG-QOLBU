@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Qolbu</title>
+    <!-- Logo & Font Website -->
+    <link rel="icon" type="image/png" href="../asset/logo-website.png"> 
+    <!-- ambil font dari google -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+
+<body>
+
+    <!-- navigasi dan header utama -->
+    <header class="main-header">
+        <!-- Area identitas merek dan nama website di sisi kiri -->
+        <div class="header-left">
+            <a href="../index.html" class="brand-link">
+                <!-- Tempat khusus gambar logo aplikasi -->
+                <div class="brand-logo">
+                    <img src="../asset/logo-website.png" alt="Logo" class="logo-img">
+                </div>
+                <h1 class="brand-name">Ruang Qolbu</h1>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-item">Beranda</a></li>
+                <li><a href="../html/al-quran.html" class="nav-item">Al-Quran</a></li>
+                <li><a href="../html/doa.html" class="nav-item">Doa-doa</a></li>
+                <li><a href="../html/about.html" class="nav-item active">About</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger-btn" id="hamburger-btn">☰</button>
+    </header>
+
+    <!-- sidebar untuk tampilan di mobile -->
+    <!-- Layar latar transparan hitam saat menu layar HP terbuka -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    
+    <!-- Wadah utama menu navigasi samping khusus tampilan HP -->
+    <div class="sidebar" id="sidebar">
+        <button class="sidebar-close" id="sidebar-close">✕</button>
+        <nav class="sidebar-menu">
+            <a href="../index.html">Beranda</a>
+            <a href="../html/al-quran.html">Al-Quran</a>
+            <a href="../html/doa.html">Doa-doa</a>
+            <a href="../html/about.html" class="active">About</a>
+        </nav>
+    </div>
+
+    <!-- konten utama -->
+    <main class="main-content">
+        <section class="about-container">
+            
+            <!-- Tempat gambar spanduk utama tentang aplikasi -->
+            <div class="about-image">
+                <img src="../asset/logo-lebar-website.jpg" alt="Ruang Qolbu">
+            </div>
+
+            <!-- Teks rincian latar belakang dan profil platform Ruang Qolbu -->
+            <div class="about-text">
+                <h1>Tentang <span>Ruang Qolbu</span></h1>
+                <p>
+                    Website <strong>Ruang Qolbu</strong> adalah website komprehensif yang dirancang untuk membantu umat
+                    islam di seluruh dunia untuk membaca, mendengarkan, dan memahami Al-Quran'an dan berbagai Doa. Aplikasi
+                    ini menampilkan audio berkualitas, terjemahan, dan navigasi yang ramah pengguna.
+                </p>
+            </div>
+
+            <!-- Area utama untuk seluruh formulir umpan balik dari pengguna -->
+            <div class="feedback-section">
+                <h2>Feedback</h2>
+                <p>Silakan berikan masukan dan kritik Anda untuk website ini.</p>
+
+                <form id="feedback-form">
+                    <!-- Kelompok isian untuk Nama pengguna -->
+                    <div class="form-group">
+                        <label for="fb-nama">Nama</label>
+                        <input type="text" id="fb-nama" placeholder="Nama Anda" required>
+                    </div>
+                    
+                    <!-- Kelompok isian untuk Alamat Email pengguna -->
+                    <div class="form-group">
+                        <label for="fb-email">Email</label>
+                        <input type="email" id="fb-email" placeholder="Email Anda" required>
+                    </div>
+                    
+                    <!-- Kelompok isian untuk Nomor HP/Telepon -->
+                    <div class="form-group">
+                        <label for="fb-hp">No HP</label>
+                        <input type="tel" id="fb-hp" placeholder="Nomor HP">
+                    </div>
+                    
+                    <!-- Kelompok isian untuk Pesan masukan atau kritik -->
+                    <div class="form-group">
+                        <label for="fb-pesan">Feedback</label>
+                        <textarea id="fb-pesan" placeholder="Tulis pesan Anda..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="form-btn">Kirim</button>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- bagian footer about -->
+    <footer class="site-footer">
+        <!-- Wadah utama seluruh kolom navigasi dan informasi bagian bawah -->
+        <div class="footer-container">
+            
+            <!-- Ringkasan deskripsi singkat identitas platform -->
+            <div class="footer-box">
+                <h2 class="footer-title">Ruang Qolbu</h2>
+                <p>Menyajikan kemudahan dalam membaca Al-Quran dan kumpulan doa sehari-hari.</p>
+            </div>
+            
+            <!-- Daftar tautan navigasi cepat menu utama -->
+            <div class="footer-box">
+                <h3 class="footer-title">Menu</h3>
+                <ul>
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="../html/al-quran.html">Al-Quran</a></li>
+                    <li><a href="../html/doa.html">Doa-doa</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            
+            <!-- Daftar tautan akun-akun media sosial resmi -->
+            <div class="footer-box">
+                <h3 class="footer-title">Sosial Media</h3>
+                <ul>
+                    <li><a href="https://instagram.com/zenwhite_" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/azis.sinaga.900" target="_blank">Facebook</a></li>
+                    <li><a href="https://wa.me/6282163698895" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://www.youtube.com/@zenwhite-w7o" target="_blank">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Baris keterangan hak cipta paling bawah -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ruang Qolbu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- penghubung javascript -->
+    <script src="../js/about.js"></script>
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

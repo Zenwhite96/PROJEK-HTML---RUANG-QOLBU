@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Qolbu</title>
+    <link rel="icon" type="image/png" href="/asset/logo-website.png">
+    <!-- bagian logo website -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- mengambil font dari google  -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- penghubung css ekternal  -->
+     <!-- Google Icons (Material Symbols) -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- bagian header -->
+    <header class="main-header">
+        <!-- bagian logo depan website bisa di tekan untuk ke halaman utama -->
+        <div class="header-left">
+            <a href="index.html" class="brand-link">
+                <div class="brand-logo">
+                    <img src="/asset/logo-website.png" alt="Logo Ruang Qolbu" class="logo-img">
+                </div>
+                <h1 class="brand-name">Ruang Qolbu</h1>
+            </a>
+        </div>
+        <!-- navigasi website -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-item active">Beranda</a></li>
+                <li><a href="/html/al-quran.html" class="nav-item">Al-Quran</a></li>
+                <li><a href="/html/doa.html" class="nav-item">Doa-doa</a></li>
+                <li><a href="/html/about.html" class="nav-item">About</a></li>
+            </ul>
+        </nav>
+        <!-- tombol hambueger buat hp -->
+        <button class="hamburger-btn" id="hamburger-btn">☰</button>
+    </header>
+
+    <!-- overlay gelap di belakang sidebar -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- sidebar yang muncul dari kanan -->
+    <div class="sidebar" id="sidebar">
+        <!-- tombol tutup sidebar -->
+        <button class="sidebar-close" id="sidebar-close">✕</button>
+        <nav class="sidebar-menu">
+            <a href="index.html" class="active">Beranda</a>
+            <a href="/html/al-quran.html">Al-Quran</a>
+            <a href="/html/doa.html">Doa-doa</a>
+            <a href="/html/about.html">About</a>
+        </nav>
+    </div>
+
+    <!-- konten utama menggunakan element sematik -->
+    <main class="main-content">
+
+        <!-- bagian selamat datang section -->
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <h1 class="welcome-title">Selamat Datang di <span>Ruang Qolbu</span></h1>
+                <p class="welcome-subtitle">
+                    Tempat menenangkan hati dan pikiran dengan<br>
+                    lantunan ayat suci Al-Quran dan doa-doa pilihan.
+                </p>
+                <div class="welcome-features">
+                    <span class="welcome-feature">114 Surah</span>
+                    <span class="welcome-feature">227 Doa</span>
+                </div>
+                <div class="welcome-cta">
+                    <a href="#card" class="welcome-btn-primary">Mulai Jelajahi</a>
+                    <a href="/html/about.html" class="welcome-btn-secondary">Pelajari Lebih Lanjut</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- bagian card al-quran dan doa -->
+        <section class="hero-section" id="card">
+            <!-- card alquran -->
+             
+            <div class="alquran">
+
+                <a href="html/al-quran.html">
+                    
+                    <div class="feature-card quran-card">
+                        <div class="card-image-box">
+                            <img src="/asset/gambar-alquran.jpg" alt="Al-Quran" class="card-img">
+                        </div>
+                        <div class="card-description">
+                            <h2 class="card-title">Mutiara Al-Quran</h2>
+                            <p class="card-text">Mari temukan kedamaian dan petunjuk hidup melalui lantunan ayat suci Al-Quran untuk qolbu kita.</p>
+                            <a href="/html/al-quran.html" class="card-btn">Baca Al-Quran →</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- card doa -->
+             <div class="doa">
+
+                 <a href="html/doa.html">
+                     
+                     <div class="feature-card doa-card">
+                         <div class="card-description">
+                             <h2 class="card-title">Kumpulan Doa</h2>
+                             <p class="card-text">Senjata seorang mukmin adalah doanya. Temukan berbagai macam doa mustajab untuk setiap langkahmu.</p>
+                             <a href="/html/doa.html" class="card-btn">Lihat Doa →</a>
+                            </div>
+                            <div class="card-image-box">
+                                <img src="/asset/gambar-doa.jpg" alt="Doa-doa" class="card-img">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+        </section>
+
+        <!-- bagian statistik mengenai jumlah surah ayat dan doa -->
+        <section class="stats-section">
+            <div class="stats-container">
+                <!-- surah -->
+                <div class="stats-item">
+                    <span class="stats-number" id="stat-surah">114</span>
+                    <span class="stats-label">Surah</span>
+                </div>
+                <!-- ayat -->
+                <div class="stats-divider"></div>
+                <div class="stats-item">
+                    <span class="stats-number" id="stat-ayat">6.236</span>
+                    <span class="stats-label">Ayat</span>
+                </div>
+                <!-- doa -->
+                <div class="stats-divider"></div>
+                <div class="stats-item">
+                    <span class="stats-number" id="stat-doa">227</span>
+                    <span class="stats-label">Doa</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- quote berjalan menyesuaikan jumlah quote -->
+        <section class="quote-carousel-section">
+            <div class="quote-carousel" id="quote-carousel">
+                <!-- quote 1 -->
+                <div class="quote-slide active">
+                    <!-- active menandakan yang mana sedangkan di jalankan pertama kali  -->
+                    <p class="quote-text">"Sesungguhnya dalam dzikir kepada Allah hati menjadi tenang."</p>
+                    <p class="quote-source">— QS. Ar-Ra'd: 28</p>
+                </div>
+                <!-- quote 2 -->
+                <div class="quote-slide">
+                    <p class="quote-text">"Dan barang siapa yang bertakwa kepada Allah, niscaya Allah akan membukakan jalan keluar baginya."</p>
+                    <p class="quote-source">— QS. At-Talaq: 2</p>
+                </div>
+                <!-- quote 3 -->
+                <div class="quote-slide">
+                    <p class="quote-text">"Sesungguhnya bersama kesulitan ada kemudahan."</p>
+                    <p class="quote-source">— QS. Al-Insyirah: 6</p>
+                </div>
+                <!-- quote 4 -->
+                <div class="quote-slide">
+                    <p class="quote-text">"Dan mohonlah pertolongan dengan sabar dan shalat."</p>
+                    <p class="quote-source">— QS. Al-Baqarah: 45</p>
+                </div>
+                <!-- quote 5 -->
+                <div class="quote-slide">
+                    <p class="quote-text">"Allah tidak membebani seseorang melainkan sesuai dengan kesanggupannya."</p>
+                    <p class="quote-source">— QS. Al-Baqarah: 286</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- bagian inspirasi qolbu yang dapat di putar -->
+        <section class="video-section">
+            <h3 class="section-subtitle subtitle-center">Inspirasi Qolbu</h3>
+            <div class="video-container">
+                <!-- mengambil link dari youtube  -->
+                <!-- allowfullscreen unutk memutar secara penuh -->
+                <!-- picture-in-picture unutk bisa di putar langsung di web saya -->
+                <iframe class="youtube-video" src="https://www.youtube.com/embed/hCn-BxMZeEM" allow=" autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="video-caption">Tonton video ini untuk menambah semangat membaca Al-Qur'an.</p>
+        </section>
+
+        <!-- bagian rekomendasi ceramah dari ustad lain -->
+        <section class="lecture-section">
+            <h3 class="section-subtitle subtitle-center">Rekomendasi Kajian Pilihan</h3>
+            <div class="lecture-grid">
+                <a href="https://www.youtube.com/watch?v=hCn-BxMZeEM" target="_blank" class="lecture-card">
+                    <img src="/asset/ceramah-1.png" alt="Thumbnail Kajian" class="lecture-thumb">
+                    <div class="lecture-info">
+                        <h4 class="lecture-title">Mengubah Pribadi Menjadi Istimewa</h4>
+                        <p class="lecture-desc">Ustadz Adi Hidayat</p>
+                    </div>
+                </a>
+                <a href="https://youtu.be/FzrXtruIFow?si=yKW9U19NtkHBahVY" target="_blank" class="lecture-card">
+                    <img src="/asset/ceramah-2.png" alt="Thumbnail Kajian" class="lecture-thumb">
+                    <div class="lecture-info">
+                        <h4 class="lecture-title">Dahsyatnya Kekuatan Doa</h4>
+                        <p class="lecture-desc">Ustadz Hanan Attaki</p>
+                    </div>
+                </a>
+                <a href="https://youtu.be/xv9UBeaEdEI?si=bkWp3erQubin8kHf" target="_blank" class="lecture-card">
+                    <img src="/asset/ceramah-3.png" alt="Thumbnail Kajian" class="lecture-thumb">
+                    <div class="lecture-info">
+                        <h4 class="lecture-title">Cara Agar Hidup Tenang</h4>
+                        <p class="lecture-desc">Ustadz Adi Hidayat</p>
+                    </div>
+                </a>
+                <a href="https://youtu.be/JANqtt-JxYc?si=O5MhZQBRU8y1hyQM" target="_blank" class="lecture-card">
+                    <img src="/asset/ceramah-4.png" alt="Thumbnail Kajian" class="lecture-thumb">
+                    <div class="lecture-info">
+                        <h4 class="lecture-title">Waktu Mustajab Berdoa</h4>
+                        <p class="lecture-desc">Ustadz Khalid Basalamah</p>
+                    </div>
+                </a>
+                <a href="https://youtu.be/wGjLIeFCCYE?si=w8xBC9rDXlx7Wt14" target="_blank" class="lecture-card">
+                    <img src="/asset/ceramah-5.png" alt="Thumbnail Kajian" class="lecture-thumb">
+                    <div class="lecture-info">
+                        <h4 class="lecture-title">Obat Hati yang Gelisah</h4>
+                        <p class="lecture-desc">Aa Gym</p>
+                    </div>
+                </a>
+                <a href="https://youtu.be/10bxaEeU2C4?si=TLnu-dunax5in9cG" target="_blank" class="lecture-card">
+                    <img src="/asset/ceramah-6.png" alt="Thumbnail Kajian" class="lecture-thumb">
+                    <div class="lecture-info">
+                        <h4 class="lecture-title">Adab Membaca Al-Quran</h4>
+                        <p class="lecture-desc">Buya Yahya</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- ===== JADWAL SHOLAT ===== -->
+<section class="shalat-section">
+    <h3 class="section-subtitle subtitle-center">Jadwal Sholat</h3>
+    <div class="shalat-container">
+        <!-- Header: lokasi + tanggal + pilih provinsi & kabkota -->
+        <div class="shalat-header">
+            <div class="shalat-location">
+                <span class="shalat-kota" id="shalat-kota">Memuat...</span>
+                <span class="shalat-tanggal" id="shalat-tanggal"></span>
+            </div>
+            <div class="shalat-controls">
+                <!-- Dropdown Provinsi -->
+                <select id="pilih-provinsi" class="filter-select">
+                    <option value="">Pilih Provinsi</option>
+                </select>
+                <!-- Dropdown Kabupaten/Kota -->
+                <select id="pilih-kabkota" class="filter-select" disabled>
+                    <option value="">Pilih Kabupaten/Kota</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Grid 6 waktu sholat -->
+        <div class="shalat-grid" id="shalat-grid">
+            <p class="loading-text">Pilih provinsi dan kabupaten/kota untuk melihat jadwal sholat.</p>
+        </div>
+    </div>
+</section>
+
+        <!-- bagian surah populer dan doa harian -->
+        <section class="bottom-section">
+            <!-- surah -->
+            <div class="content-list-wrapper">
+                <h3 class="section-subtitle">Surah Populer</h3>
+                <div id="popular-surah-list" class="grid-container">
+                    <p class="loading-text">Memuat Surah...</p>
+                </div>
+            </div>
+            <!-- doa -->
+            <div class="content-list-wrapper">
+                <h3 class="section-subtitle">Doa Sehari-hari</h3>
+                <div id="daily-doa-list" class="grid-container">
+                    <p class="loading-text">Memuat Doa...</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h2 class="footer-title">Ruang Qolbu</h2>
+                <p>Menyajikan kemudahan dalam membaca Al-Quran dan kumpulan doa sehari-hari untuk menenangkan qolbu.</p>
+            </div>
+            <div class="footer-box">
+                <!-- footer untuk akses navigasi -->
+                <h3 class="footer-title">Menu</h3>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="/html/al-quran.html">Al-Quran</a></li>
+                    <li><a href="/html/doa.html">Doa-doa</a></li>
+                    <li><a href="/html/about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <!-- footer untuk akses media sosial -->
+                <h3 class="footer-title">Sosial Media</h3>
+                <ul>
+                    <li><a href="https://instagram.com/zenwhite_" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/azis.sinaga.900" target="_blank">Facebook</a></li>
+                    <li><a href="https://wa.me/6282163698895" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://www.youtube.com/@zenwhite-w7o" target="_blank">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <!-- footer paling bawah -->
+            <p>&copy; 2026 Ruang Qolbu. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- untuk menghubungkan javascript ke html -->
+    <script src="js/script.js"></script>
+</body>
+</html>
